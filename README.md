@@ -31,9 +31,13 @@ Try It Out 🌟 https://ruchkakat.github.io/kawaii-to-do-app/
 
 
 Why it's special?
+
 Unlike standard todo apps, this one features:
+
 🍄 Whimsical cursor animations
+
 🌈 Pastel color scheme
+
 📱 Perfect responsiveness from desktop to mobile
 
 
