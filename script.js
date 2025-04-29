@@ -1,5 +1,4 @@
 //Initial References
-let isProcessingClick = false;
 const newTaskInput = document.querySelector('#new-task input');
 const tasksDiv = document.querySelector('#tasks');
 let deleteTasks, editTasks, tasks;
@@ -54,19 +53,15 @@ const displayTasks = () => {
 
     //Tasks completed
     tasks = document.querySelectorAll('.task');
-    tasks.forEach((element) => {
-        element.addEventListener('click', () => {
-            if (isProcessingClick) return;
-            isProcessingClick = true;
-            
-            if (element.classList.contains('completed')) {
+    tasks.forEach((element, index) => {
+        element.onclick = () => {
+            //Local storage update
+            if(element.classList.contains('completed')){
                 updateStorage(element.id.split('_')[0], element.innerText, false);
             } else {
                 updateStorage(element.id.split('_')[0], element.innerText, true);
             }
-            
-            setTimeout(() => { isProcessingClick = false; }, 300);
-        });
+        }
     });
 
     //Edit tasks
