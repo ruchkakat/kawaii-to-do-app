@@ -9,7 +9,7 @@
 
 body {
   background: #ffe39f url("img/bg.png") no-repeat center center;
-  background-size: 100% auto;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: flex-start;
