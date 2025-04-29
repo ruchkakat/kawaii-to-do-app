@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #ffe39f url('img/bg.png') no-repeat center center fixed;
+    background: #ffe39f url('img/bg.png') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -162,3 +162,9 @@ body {
       padding: 0.5em;
     }
   }
+
+  @media (orientation: landscape) {
+    body {
+        background-size: 100% 100%;
+    }
+}
