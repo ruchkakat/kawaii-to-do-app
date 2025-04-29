@@ -1,11 +1,12 @@
 //Initial References
+let isProcessingClick = false;
 const newTaskInput = document.querySelector('#new-task input');
 const tasksDiv = document.querySelector('#tasks');
 let deleteTasks, editTasks, tasks;
 let updateNote = '';
 let count;
 
-//Function on window load 
+//Function on window load
 window.onload = () => {
     updateNote = '';
     count = Object.keys(localStorage.length);
@@ -54,13 +55,17 @@ const displayTasks = () => {
     //Tasks completed
     tasks = document.querySelectorAll('.task');
     tasks.forEach((element) => {
-        element.addEventListener('click', function handler() {
-            if(element.classList.contains('completed')){
+        element.addEventListener('click', () => {
+            if (isProcessingClick) return;
+            isProcessingClick = true;
+            
+            if (element.classList.contains('completed')) {
                 updateStorage(element.id.split('_')[0], element.innerText, false);
             } else {
                 updateStorage(element.id.split('_')[0], element.innerText, true);
             }
-            element.removeEventListener('click', handler);
+            
+            setTimeout(() => { isProcessingClick = false; }, 300);
         });
     });
 
