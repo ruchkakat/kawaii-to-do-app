@@ -13,8 +13,6 @@ Features ✨
 
 • Playful cursor effects and delightful UI elements
 
-• Completed task strikethrough visualization
-
 
 Tech Stack 🛠️
 
