@@ -1,170 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Russo+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Russo+One&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    cursor: url('img/cursor.png'), auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url("img/cursor.png"), auto;
 }
 
 body {
-    background: #ffe39f url('img/bg.png') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 2em 0;
-    min-height: 100vh;
+  background: #ffe39f url("img/bg.png") no-repeat center center;
+  background-size: 100% auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2em 0;
+  min-height: 100vh;
 }
 
 .container {
-    width: 85%;
-    max-width: 34em;
+  width: 85%;
+  max-width: 34em;
 }
 
 .decorations {
-    display: flex;
-    justify-content: space-between;
-    width: 120%;
-    margin-left: -10%;
-    max-width: calc(34em * 1.2);
-    margin-bottom: -20px;
+  display: flex;
+  justify-content: space-between;
+  width: 120%;
+  margin-left: -10%;
+  max-width: calc(34em * 1.2);
+  margin-bottom: -20px;
 }
-
 
 .decorations img {
-    width: 100%;
-    height: auto;
-    max-width: 85px;
+  width: 100%;
+  height: auto;
+  max-width: 85px;
 }
 
-
 #new-task {
-    position: relative;
-    background-color: #FFF1CE;
-    padding: 1.8em 1.25em;
-    border-radius: 2em;
-    display: grid;
-    grid-template-columns: 9fr 3fr;
-    gap: 1em;
+  position: relative;
+  background-color: #fff1ce;
+  padding: 1.8em 1.25em;
+  border-radius: 2em;
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1em;
 }
 
 #new-task input {
-    font-family: "Coiny", "Russo One", sans-serif;
-    font-size: 1em;
-    border: none;
-    border-bottom: 2px solid #464D34;
-    padding: 0.8em 0.5em;
-    color: #595343;
-    background-color: #FFF1CE;
+  font-family: "Coiny", "Russo One", sans-serif;
+  font-size: 1em;
+  border: none;
+  border-bottom: 2px solid #464d34;
+  padding: 0.8em 0.5em;
+  color: #595343;
+  background-color: #fff1ce;
 }
 
 #new-task input:focus {
-    outline: none;
+  outline: none;
 }
 
-#new-task button, .task button {
-    font-family: "Coiny", "Russo One", sans-serif;
-    font-size: 1em;
-    background-image: linear-gradient(to bottom, #f0ffc7, #D5EB99 4%);
-    color: #464D34;
-    outline: none;
-    border: none;
-    border-radius: 0.5em;
-    box-shadow: 0 2px rgba(200, 195, 160, 0.9);
-    cursor: url('img/cursor-click.png'), auto;
+#new-task button,
+.task button {
+  font-family: "Coiny", "Russo One", sans-serif;
+  font-size: 1em;
+  background-image: linear-gradient(to bottom, #f0ffc7, #d5eb99 4%);
+  color: #464d34;
+  outline: none;
+  border: none;
+  border-radius: 0.5em;
+  box-shadow: 0 2px rgba(200, 195, 160, 0.9);
+  cursor: url("img/cursor-click.png"), auto;
 }
 
-#new-task button:hover, .task button:hover {
-    background-image: linear-gradient(to bottom, #D5EB99, #c4d692 4%);
-    transform: translateY(1px);
-    box-shadow: 0 1px rgba(200, 195, 160, 0.9);
+#new-task button:hover,
+.task button:hover {
+  background-image: linear-gradient(to bottom, #d5eb99, #c4d692 4%);
+  transform: translateY(1px);
+  box-shadow: 0 1px rgba(200, 195, 160, 0.9);
 }
 
-#new-task button:active, .task button:active {
-    transform: translateY(2px);
-    box-shadow: none;
+#new-task button:active,
+.task button:active {
+  transform: translateY(2px);
+  box-shadow: none;
 }
 
 #tasks {
-    background-color: #FFF1CE;
-    position: relative;
-    padding: 1.6em 1.25em;
-    margin-top: 3.8em;
-    width: 100%;
-    border-radius: 2em;
+  background-color: #fff1ce;
+  position: relative;
+  padding: 1.6em 1.25em;
+  margin-top: 3.8em;
+  width: 100%;
+  border-radius: 2em;
 }
 
-.task{
-    background-color: #FFF1CE;
-    padding: 0 0.6em;
-    margin-top: 0.6em;
-    display: flex;
-    align-items: center;
+.task {
+  background-color: #fff1ce;
+  padding: 0 0.6em;
+  margin-top: 0.6em;
+  display: flex;
+  align-items: center;
 }
 
-.task span{
-    font-family: "Coiny", "Russo One", sans-serif;
-    font-size: 0.9em;
-    color: #464D34;
+.task span {
+  font-family: "Coiny", "Russo One", sans-serif;
+  font-size: 0.9em;
+  color: #464d34;
 }
 
 .task button {
-    padding: 0.8em;
+  padding: 0.8em;
 }
 
 .edit {
-    margin-left: auto;
-    margin-right: 0.5em;
+  margin-left: auto;
+  margin-right: 0.5em;
 }
 
 /* Responsiveness */
 @media (max-width: 650px) {
-    .container {
-      width: 95%;
-      padding: 0 10px;
-    }
-  
-    #new-task {
-      grid-template-columns: 1fr;
-      gap: 0.5em;
-      padding: 1em;
-    }
-  
-    #new-task input {
-      width: 100%;
-      font-size: 0.9em;
-      padding: 0.6em 0.4em;
-    }
-  
-    #new-task button {
-      width: 100%;
-      padding: 0.6em;
-    }
-  
-    .decorations {
-      width: 110%;
-      margin-left: -5%;
-      max-width: calc(34em * 1.1);
-      margin-bottom: 0;
-    }
-  
-    .decorations img {
-      max-width: 60px;
-    }
-  
-    #tasks {
-      margin-top: 2em;
-      padding: 1em;
-    }
-  
-    .task button {
-      padding: 0.5em;
-    }
+  .container {
+    width: 95%;
+    padding: 0 10px;
   }
 
-  @media (orientation: landscape) {
-    body {
-        background-size: 100% 100%;
-    }
+  #new-task {
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+    padding: 1em;
+  }
+
+  #new-task input {
+    width: 100%;
+    font-size: 0.9em;
+    padding: 0.6em 0.4em;
+  }
+
+  #new-task button {
+    width: 100%;
+    padding: 0.6em;
+  }
+
+  .decorations {
+    width: 110%;
+    margin-left: -5%;
+    max-width: calc(34em * 1.1);
+    margin-bottom: 0;
+  }
+
+  .decorations img {
+    max-width: 60px;
+  }
+
+  #tasks {
+    margin-top: 2em;
+    padding: 1em;
+  }
+
+  .task button {
+    padding: 0.5em;
+  }
 }
