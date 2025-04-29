@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #ffe39f url('img/bg.png') no-repeat center center;
+    background: #ffe39f url('img/bg.png') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
