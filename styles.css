@@ -7,9 +7,18 @@
   cursor: url("img/cursor.png"), auto;
 }
 
+html {
+    background: #ffe39f url("img/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
 body {
-  background: #ffe39f url("img/bg.png") no-repeat center center;
-  background-size: cover;
+  
+  
   display: flex;
   justify-content: center;
   align-items: flex-start;
