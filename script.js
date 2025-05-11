@@ -32,7 +32,19 @@ const displayTasks = () => {
         let taskInnerDiv = document.createElement('div');
         taskInnerDiv.classList.add('task');
         taskInnerDiv.setAttribute('id', key);
-        taskInnerDiv.innerHTML = `<span id='taskname'>${key.split('_')[1]}</span>`;
+        
+        // Parse the stored value to get completion status
+        let isCompleted = value === 'true';
+        
+        // Create task name span with appropriate class
+        let taskNameSpan = document.createElement('span');
+        taskNameSpan.id = 'taskname';
+        taskNameSpan.textContent = key.split('_')[1];
+        if(isCompleted) {
+            taskNameSpan.classList.add('done');
+        }
+        
+        taskInnerDiv.appendChild(taskNameSpan);
         
         let editButton = document.createElement('button');
         editButton.classList.add('edit');
@@ -65,6 +77,21 @@ const displayTasks = () => {
             removeTask(parent.id);
             parent.remove();
             count -= 1;
+        });
+    });
+    
+    // Toggle done/undone on task click
+    let taskNames = document.querySelectorAll('#taskname');
+    taskNames.forEach(task => {
+        task.addEventListener('click', function() {
+            let parent = this.parentElement;
+            let isCurrentlyCompleted = this.classList.contains('done');
+            
+            // Toggle the class
+            this.classList.toggle('done');
+            
+            // Update localStorage with new completion status
+            updateStorage(parent.id.split('_')[0], parent.id.split('_')[1], !isCurrentlyCompleted);
         });
     });
 };

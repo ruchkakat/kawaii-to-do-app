@@ -108,6 +108,17 @@ body {
   font-family: "Coiny", "Russo One", sans-serif;
   font-size: 0.9em;
   color: #464d34;
+  transition: all 0.3s ease;
+}
+
+.task span:hover {
+  transform: scale(1.02);
+}
+
+.task span.done {
+  text-decoration: line-through;
+  color: #464d34 !important;
+  opacity: 0.7;
 }
 
 .task button {
